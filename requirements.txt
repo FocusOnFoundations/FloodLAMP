@@ -1,0 +1,5 @@
+langchain==0.0.352
+openai
+pandas==2.0.3
+pinecone_client==2.2.4
+streamlit==1.29.0
