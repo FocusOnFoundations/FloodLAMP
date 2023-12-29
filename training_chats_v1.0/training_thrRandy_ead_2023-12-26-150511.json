@@ -1,0 +1,715 @@
+{
+    "thread_id": "0000",
+    "thread_start_date": "2023-12-26",
+    "thread_start_time": "15:05:11.583824",
+    "sessions": [
+        {
+            "session_metadata": {
+                "session_id": "session_001",
+                "code_version": "1.1",
+                "code_description": "QA Retrieval",
+                "code_details": {
+                    "splitter": "",
+                    "retriever": "mmr vectorstore",
+                    "prompts": {
+                        "QA_PROMPT": "\n\nYou are a chatbot that is highly skilled in the FloodLAMP QuickColor test. Below you will be given some retrieved context from a collection of documents you have access to, and you will use it's knowledge to answer the question asked by the user to the best of your ability.\n\nRETRIEVED CONTENT\n{context}\n\nQuestion: {question}\nHelpful Answer:\n",
+                        "CONDENSE_QUESTION_PROMPT": "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question, in its original language.\n\nChat History:\n{chat_history}\nFollow Up Input: {question}\nStandalone question:"
+                    },
+                    "chains": "Conversational Retrieval Chain"
+                }
+            },
+            "session_content": [
+                {
+                    "exchange_id": "exchange_001",
+                    "object": "DOES THIS DO ANYTHING????",
+                    "created": "2023-12-26 15:10:26.541313",
+                    "model": "gpt-4",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "User",
+                                "content": "At what point should you put your inactivated samples in the fridge by?"
+                            },
+                            "finish_reason": "completed"
+                        },
+                        {
+                            "index": 1,
+                            "message": {
+                                "role": "Bot",
+                                "content": "You should put your inactivated samples in the fridge before the 30-minute mark from when you pull them off the PCR cold block. This is to ensure that they do not sit at room temperature for more than 30 minutes, as per the longer protocol mentioned in the retrieved content."
+                            },
+                            "finish_reason": "completed"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": "",
+                        "completion_tokens": "",
+                        "total_tokens": ""
+                    },
+                    "under_the_hood": {
+                        "retrieved_chunks": [
+                            {
+                                "chunk_num": 1,
+                                "source": "SOP-104-A_1 Test Training - Run Form NO HTML.md",
+                                "content": "Remove PCR cold block from freezer ~10 min before adding tubes\nPrep RM plate/strips (thawed, not warm)\nSet up tips to align with reactions\nUse a lookup rack to keep track of sample order\nTip layout aligns with arrangement of sample tubes in lookup rack & aligns with layout of reaction plate/strips\nAdd negative control first (2uL 1XISS)\nAdd 2uL of each inactivated sample to reaction tubes, visually checking the volume in the tip each time. Pipette up & down 5X, blow out in liquid, tip touch.",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 2,
+                                "source": "FloodLAMP Training Video 04 - Inactivation Reaction.md",
+                                "content": "Test Trainer  [5:42](https://vimeo.com/668226123/14d1448aed?ts=342000)\nOkay, it's almost done. Okay. There we go. So pull these guys off. There we go. Got to give it at least five minutes to cool. And per the protocol, the longer protocol, It says make sure to put in the fridge before the 30 minute mark. That would be 30 minutes from when you pull them off. So you don't want to leave them sitting at room temp for more than that. Okay, that's it.",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 3,
+                                "source": "FloodLAMP Training Video 08 - Intaking Samples.md",
+                                "content": "samples together, which typically they're going to be negative. Well, not so much right now, unfortunately, but when you're doing routine screening. And then the few positives that you do get, you can pull out easily. And the result of the rest is negative, and the positive is positive. So we're going to make sure to remember our key step here, get these guys in the fridge. There we go. Thanks for watching!",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 4,
+                                "source": "FloodLAMP Training Video 02 - Safety and Contamination.md",
+                                "content": "We do sometimes use medical masks as well. I prefer N95s especially when I'm at our lab because there are a bunch of other people. From a, Yeah, from an infection control point, the N95s are preferred if you have them. From a contamination, when we get the contamination side, which is about protecting the test, a medical mask is fine. So in terms of sample handling, it's better if the incoming sample tubes are actually in biohazard bags, or if you are doing collection, if you're having all 20 people come to the same place, you could put them in a rack and just put that in a closed bin and save a lot of plastic. Again, some of that is your call in terms of your infection control procedure. The sample tubes, we do call for them to be wiped with alcohol after debagging. So the step with the highest infection control risk is when you open the tubes with the dry swabs for adding the 1X inactivation saline solution. So we prefer to do this in a well ventilated place. The current deployments",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            }
+                        ]
+                    },
+                    "review": {
+                        "reviewer_name": "",
+                        "response_score": "",
+                        "retrieval_score": "",
+                        "review_note": "",
+                        "response_feedback": "",
+                        "retrieval_feedback": ""
+                    }
+                },
+                {
+                    "exchange_id": "exchange_002",
+                    "object": "DOES THIS DO ANYTHING????",
+                    "created": "2023-12-26 15:59:16.694544",
+                    "model": "gpt-4",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "User",
+                                "content": "You should always blow out with the pipette to prevent reagent loss. True or false and why?"
+                            },
+                            "finish_reason": "completed"
+                        },
+                        {
+                            "index": 1,
+                            "message": {
+                                "role": "Bot",
+                                "content": "False. The retrieved content does not specifically address the practice of blowing out with a pipette to prevent reagent loss. However, in general laboratory practice, whether to blow out with a pipette depends on the type of pipette tip being used and the protocol specified for the particular assay or reagent.\n\nPipette tips can be either \"positive displacement\" or \"air displacement.\" For air displacement pipettes, there are two types of tips: \"pre-rinsed\" or \"standard.\" With pre-rinsed tips, you typically do not need to blow out because the tip is designed to dispense the correct volume without the need for blowing out. With standard tips, you might need to blow out to ensure the complete delivery of the liquid, but this is not always recommended because it can lead to aerosol generation, which could be a source of contamination, especially in sensitive assays like the FloodLAMP QuickColor test.\n\nIn the context of the FloodLAMP QuickColor test, the primary concern seems to be avoiding contamination and ensuring the integrity of the test components. Blowing out could potentially introduce contaminants or aerosols that could compromise the test results. Therefore, it is essential to follow the specific protocol for the test, which would likely prioritize accuracy and contamination prevention over the concern of minimal reagent loss."
+                            },
+                            "finish_reason": "completed"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": "",
+                        "completion_tokens": "",
+                        "total_tokens": ""
+                    },
+                    "under_the_hood": {
+                        "retrieved_chunks": [
+                            {
+                                "chunk_num": 1,
+                                "source": "FloodLAMP Training Video 07 - Adding Samples to Reaction.md",
+                                "content": "most fragile component of the test, meaning if you let it sit out at room temperature for very long, it degrades really fast and it won't work. Okay, so there we go. We're going to go back and get our first tip. We're gonna pipe it up and down to mix it quick. Oh, gotta make sure. That was something, I haven't had it a little too fast. You know, sometimes when you don't get your tip seated properly, it doesn't work. There, that worked. Doesn't work. There, that worked. Okay. And we got this. Okay. Shut this. Put this guy back in his little baggie. Back in the freezer. Okay, and a very important step here, which is to change gloves. If you just touch with your left hand and you're careful, you can just change one glove, but you have to change gloves. It's just a precaution to avoid any positive control cross contamination. So now we have our conveniently pre-loaded strip tubes here. When you grab these, be careful not to touch the inside. Okay, so press down there. There we go. Now,",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 2,
+                                "source": "FloodLAMP Training Video 02 - Safety and Contamination.md",
+                                "content": "amplification reaction. And the reason is because the inactivation reaction, you're putting a nose swab with tons of RNAs in it into that reaction. And that's part of the purpose of it is to degrade RNAs. So we really focus on the second step of this test. How do you know, you know, how do we know if you have this problem? Well, the positive controls won't work. And so another key thing that makes us able to do this test in this kind of environment with newly trained firefighters is the controls, when you use them properly and when you design the test to use the controls, give you a great indication of when the test is working and when it's not. So what are we going to do to avoid the RNAs is, number one, is access control. And I sort of already saw some of this going on. I saw Peter in the lab like leaning over the amp table and I was like, oh no, don't touch anything with your bare hands. So that's the first thing.",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 3,
+                                "source": "FloodLAMP Training Video 02 - Safety and Contamination.md",
+                                "content": "do a good cleaning up front and then keep things clean. Danny Chavez said he cleans his lab every day, and I think that's probably recommended from good lab practice. I actually don't for our lab here because it takes time and I prefer to be extra careful and keep the key things in bins that I keep on a shelf. So you can also use foil to put over things to keep them clean, keep dust off. You want to be extra careful with the reaction plastics and Katrina will help kind of point out what those are. You want to be wary of cross contamination. By cross contamination, I mean you touch a pen with your bare hands, and now you get finger grease on the pen. And then you're wearing gloves, you think you're okay, but then you go and touch something that's greasy, then you can pick up some and transfer. Now, you could drive yourself crazy thinking, well, how many degrees of cross contamination do I got to worry about? Worry about the first degree and just try to get some basic procedures and",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 4,
+                                "source": "FloodLAMP Training Video 02 - Safety and Contamination.md",
+                                "content": "We do sometimes use medical masks as well. I prefer N95s especially when I'm at our lab because there are a bunch of other people. From a, Yeah, from an infection control point, the N95s are preferred if you have them. From a contamination, when we get the contamination side, which is about protecting the test, a medical mask is fine. So in terms of sample handling, it's better if the incoming sample tubes are actually in biohazard bags, or if you are doing collection, if you're having all 20 people come to the same place, you could put them in a rack and just put that in a closed bin and save a lot of plastic. Again, some of that is your call in terms of your infection control procedure. The sample tubes, we do call for them to be wiped with alcohol after debagging. So the step with the highest infection control risk is when you open the tubes with the dry swabs for adding the 1X inactivation saline solution. So we prefer to do this in a well ventilated place. The current deployments",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            }
+                        ]
+                    },
+                    "review": {
+                        "reviewer_name": "",
+                        "response_score": "",
+                        "retrieval_score": "",
+                        "review_note": "",
+                        "response_feedback": "",
+                        "retrieval_feedback": ""
+                    }
+                },
+                {
+                    "exchange_id": "exchange_003",
+                    "object": "DOES THIS DO ANYTHING????",
+                    "created": "2023-12-26 16:01:55.927594",
+                    "model": "gpt-4",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "User",
+                                "content": "What control is added first?"
+                            },
+                            "finish_reason": "completed"
+                        },
+                        {
+                            "index": 1,
+                            "message": {
+                                "role": "Bot",
+                                "content": "Based on the retrieved content, the control that is added first is the positive control. The text mentions, \"Got the positive control in the freezer here,\" indicating that the positive control is prepared for use. It also states, \"So what I do here is warm it up for about 30 seconds,\" which suggests that the positive control is handled and warmed up before use, implying it is the first control to be added in the process described."
+                            },
+                            "finish_reason": "completed"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": "",
+                        "completion_tokens": "",
+                        "total_tokens": ""
+                    },
+                    "under_the_hood": {
+                        "retrieved_chunks": [
+                            {
+                                "chunk_num": 1,
+                                "source": "FloodLAMP Training Video 07 - Adding Samples to Reaction.md",
+                                "content": "tips. That's why we align the tips, or set up the tips, we call it. There we go, number five. Number five. You'll get used to the positions here. If you get lost, look over there. Okay, and one more, six. If you get lost look over there, yeah okay and one more number seven. We're just going to leave that eighth one blank. Okay. Here we go. Keep these guys covered. So if we look at our list here, set up the tips, add the two microliters. You know, it doesn't say to add the positive control, it doesn't say to add the negative control because this is a short version. The long version has that in there. The positive control ID, actually had written down, it's TPC underscore. There we go. And I put quotes here for refer to the 1X. Okay. Got the positive control in the freezer here. So I'm going to be careful with this. I'll try to only touch the tube with my left hand. So what I do here is warm it up for about 30 seconds. So this is SARS-2 RNA, stabilized in total human RNA. This is the",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 2,
+                                "source": "FloodLAMP Training Video 02 - Safety and Contamination.md",
+                                "content": "That's the first thing is that, you know, I've seen this problem too when we were giving tours, three, four fire chiefs and everybody were coming in and then it's like, oh no, like you don't want to, they can just, if they don't know, they can just touch something and cause a real annoying problem. So I would recommend putting a lock on the door, putting the sign up and just controlling access to it. I mean, do definitely feel free to give tours and stuff, but just make sure people don't touch anything. There is a station, a desk station where you can touch your computer or other stuff without gloves, but it's a certain area. All the rest of the area, you just think you've got to have gloves on. And even in addition to gloves, you really want a lab coat so that you don't even get your forearm touching anything. And it's just better to be extra careful about this and just to get in the mindset where skin doesn't touch anything that's clean in the stations. So I encourage a process to",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 3,
+                                "source": "FloodLAMP Training Video 12 - Large Scale Inactivation.md",
+                                "content": "we'll pull the first ones out. Kind of go across. Okay. Okay. Okay. All right, now we let these cook for eight minutes.",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 4,
+                                "source": "FloodLAMP Training Video 03 - 1X Inactivation Saline Solution Prep.md",
+                                "content": "come in the door as a part of the morning prep. And then right on the tube. For good hygiene there, put this info here. Okay, check off that you did it. Oh, I'm sorry, we haven't done this step yet. This is adding it. We did the prep. So we'll come back to this in just a sec. OK. We are done with making the 1X.",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            }
+                        ]
+                    },
+                    "review": {
+                        "reviewer_name": "",
+                        "response_score": "",
+                        "retrieval_score": "",
+                        "review_note": "",
+                        "response_feedback": "",
+                        "retrieval_feedback": ""
+                    }
+                },
+                {
+                    "exchange_id": "exchange_004",
+                    "object": "DOES THIS DO ANYTHING????",
+                    "created": "2023-12-26 16:04:10.054490",
+                    "model": "gpt-4",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "User",
+                                "content": "What is the difference between the 100XIS and the IXISS"
+                            },
+                            "finish_reason": "completed"
+                        },
+                        {
+                            "index": 1,
+                            "message": {
+                                "role": "Bot",
+                                "content": "The 100XIS and the 1XISS are two different solutions used in the FloodLAMP QuickColor test process. Based on the retrieved content:\n\n- 100XIS stands for \"100-fold concentrated Inactivation Solution.\" This is a highly concentrated solution used to inactivate samples, likely containing substances that can neutralize any potential pathogens in the sample for safe handling.\n\n- 1XISS stands for \"1X Inactivation Saline Solution.\" This is a diluted version of the inactivation solution, prepared by combining the 100XIS with saline to achieve a working concentration that is suitable for the inactivation process in the test.\n\nThe process of preparing the 1XISS involves mixing the 100XIS with saline in a specific ratio to achieve the desired 1X concentration, vortexing the mixture for 30 seconds, and then labeling the tube with an ID for tracking and record-keeping purposes. The 1XISS is used during the inactivation step of the testing process to ensure that the samples are safe to handle and that any potential contaminants are neutralized."
+                            },
+                            "finish_reason": "completed"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": "",
+                        "completion_tokens": "",
+                        "total_tokens": ""
+                    },
+                    "under_the_hood": {
+                        "retrieved_chunks": [
+                            {
+                                "chunk_num": 1,
+                                "source": "SOP-104-A_1 Test Training - Run Form NO HTML.md",
+                                "content": "100XIS\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.. 100-fold concentrated Inactivation Solution\n1XISS\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026. 1X Inactivation Saline Solution\nPGS\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026. Primer Guanidine Solution\nCLAMP MM\u2026\u2026\u2026\u2026\u2026\u2026\u2026. Colorimetric Loop-Mediated Isothermal Amplification Master Mix\nRM\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026 Reaction Mix (CLAMP MM and PGS)\nTPC\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026. Twist Positive Control\n\n## 1XISS PREP\n\nRecord volumes of saline & 100XIS in 1XISS Prep form prior to pipetting\nCombine saline and 100XIS in a 50mL falcon tube or 30mL Chub tube, depending on volume\nVortex 30 seconds\nLabel tube with 1XISS ID (e.g., \u201c1X_MMDD-1\u201d) and record the same ID into the 1XISS Prep Form and the table on this form\n\nSample Batch ID (from App):\nInactiv Heater:\n1X Inactiv Saline Soln ID:\nDispense: Pipette or Manual Disp or Electric Disp\n\n## INACTIVATION",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 2,
+                                "source": "FloodLAMP Training Video 03 - 1X Inactivation Saline Solution Prep.md",
+                                "content": "I recommend when you start, You start with the long one. This one corresponds to the mini system. We have one for the standard system. And this one has, this is what you're going to be using to practice all of the items that are checked on our certification. So you want your pen labeled with green tape, separation of the post-amp area. Got that. Heaters are on. And now this is an important part. The heater indicator light is lit. If you just turn this on, it's easy to think it's hot, and then it's not, and you go to use it. So all the heaters have a heating indicator light, so know what that is. It looks like little flames coming up there. So you notice these are very similar, except this just has some extra steps. This fits on one page. This is three pages. So it also has the common infractions here, which you'll want to watch out for. So I'm going to keep checking this as we go, Though the one I'm going to fill out mainly is this one for a run. This is what you'll use once you get",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 3,
+                                "source": "FloodLAMP Training Video 02 - Safety and Contamination.md",
+                                "content": "Summary  [26:45](https://vimeo.com/654504246/b9130720de?ts=1605000)\nSo I would recommend putting a lock on the door, putting the sign up and just controlling access to it. There is a station, a desk station where you can touch your computer or other stuff without gloves, but it's a certain area. And even in addition to gloves, you really want a lab coat so that you don't even get your forearm touching anything.\n\nSummary  [30:59](https://vimeo.com/654504246/b9130720de?ts=1859000)\nThe first is sample cross contamination. By this we mean transferring material from one sample tube to another. A telltale sign of that would be neighbor positives and more than one positive in a batch. The second is Amplicon contamination. Amplicons are the product of the DNA of the amplification.\n\n\n### transcript",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 4,
+                                "source": "FloodLAMP Training Video 03 - 1X Inactivation Saline Solution Prep.md",
+                                "content": "17. There we go. So the key here is every time you make the 1XISS, you fill out a line. It is 1pm. And we give this a designation 0117-1. Then we put the saline dash one then we put the saline information this one is a SAO underscore 21 10 zero seven dash five mil these are some different names. Oh, I forgot a zero, 10, 07. And this head expiration of 10, 22. So the saline here is 5.05, And then the 100x will be 50.5. So get set up. Oh, look, it's already set at 50.5. Done this recently. So the key here is to write down the amounts first. And I'm going to be using, overall, the run app short form. But I'm going to show you the long form as well. I like to keep the forms underneath. Okay, so here we go. I can start filling this out for the day. Okay, heaters are on and I'm working on making that. Got that. We are in a special setup here, so I'm not able to wear my goggles. So we wipe the tubes. So we're going to come back to this guy. So now this is the short version of the run sheet.",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            }
+                        ]
+                    },
+                    "review": {
+                        "reviewer_name": "",
+                        "response_score": "",
+                        "retrieval_score": "",
+                        "review_note": "",
+                        "response_feedback": "",
+                        "retrieval_feedback": ""
+                    }
+                },
+                {
+                    "exchange_id": "exchange_005",
+                    "object": "DOES THIS DO ANYTHING????",
+                    "created": "2023-12-26 16:07:16.397793",
+                    "model": "gpt-4",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "User",
+                                "content": "Is it okay to use an unmarked pen with clean gloves?"
+                            },
+                            "finish_reason": "completed"
+                        },
+                        {
+                            "index": 1,
+                            "message": {
+                                "role": "Bot",
+                                "content": "No, it is not okay to use an unmarked pen with clean gloves. According to the retrieved content under \"CONTAMINATION INFRACTIONS,\" one of the infractions listed is the use of an unmarked pen/marker with clean gloves without cleaning the gloves after or changing the gloves. This suggests that using an unmarked pen could potentially lead to contamination, and proper procedures must be followed to maintain cleanliness and avoid cross-contamination in the lab setting."
+                            },
+                            "finish_reason": "completed"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": "",
+                        "completion_tokens": "",
+                        "total_tokens": ""
+                    },
+                    "under_the_hood": {
+                        "retrieved_chunks": [
+                            {
+                                "chunk_num": 1,
+                                "source": "FloodLAMP Training Video 02 - Safety and Contamination.md",
+                                "content": "do a good cleaning up front and then keep things clean. Danny Chavez said he cleans his lab every day, and I think that's probably recommended from good lab practice. I actually don't for our lab here because it takes time and I prefer to be extra careful and keep the key things in bins that I keep on a shelf. So you can also use foil to put over things to keep them clean, keep dust off. You want to be extra careful with the reaction plastics and Katrina will help kind of point out what those are. You want to be wary of cross contamination. By cross contamination, I mean you touch a pen with your bare hands, and now you get finger grease on the pen. And then you're wearing gloves, you think you're okay, but then you go and touch something that's greasy, then you can pick up some and transfer. Now, you could drive yourself crazy thinking, well, how many degrees of cross contamination do I got to worry about? Worry about the first degree and just try to get some basic procedures and",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 2,
+                                "source": "FloodLAMP Training Video 02 - Safety and Contamination.md",
+                                "content": "Speaker 2  [29:36](https://vimeo.com/654504246/b9130720de?ts=1776000)\nNope. No, but I'm sure Randy's work, firefighters would probably look a little intimidated by all this stuff. This is not normally our area. Yeah. But I think the takeaway is, yeah, we're touching stuff and make sure we're clean.\n\nSpeaker 0  [29:54](https://vimeo.com/654504246/b9130720de?ts=1794000)\nYep. Would, would\n\nSpeaker 2  [29:57](https://vimeo.com/654504246/b9130720de?ts=1797000)\ngowns work as well as lab coats?",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 3,
+                                "source": "SOP-104-A_1 Test Training - Run Form NO HTML.md",
+                                "content": "# Amplification Training - Run Form\n\n## PREP\n\nPen & sharpie labeled with green tape\nSeparation of Post-Amp area\nHeaters on (Heat indicator lit!)\nSafety Procedures:\nlab coat\ngloves\nface mask\nface shield or goggles\nAlcohol wipe sample tubes\n\nLog Link: SOP-104-B_1 {SITE}\nLocation:\nName:\nDate:\n\nTime:\n\n## CONTAMINATION INFRACTIONS\n\nPPE lapse/removal\nUse green labeled pen/marker with bare hands and not putting it to be cleaned afterwards\nUse unmarked pen/marker with clean gloves (without cleaning gloves after or changing gloves)\nBare hands on anything improper, except in desk area\nReuse pipette tip improperly\nTouch pipette tip to anything and then not discard it\nTouch anything dirty then go back to work (face, mask, uncleaned phone, uncleaned laptop)\n\n## NOTE\n\nIt is recommended that 1XISS and Reaction Mix be prepared before the assay run (instructions below).\n\n## DOCUMENTATION\n\nCheck off each item after completing it\nWrite legibly\n\n## GLOSSARY OF TERMS",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 4,
+                                "source": "FloodLAMP Training Video 11 - Large Scale Clean and Dispense.md",
+                                "content": "Okay, so we're going to handle the sample so I'm going to get on my canary gown. I just leave it tight at the neck and put on over my lab coat. Oh, I got a tear. Oh, got a tear. There we go. That's not ideal, but we're gonna roll with it. We're going to roll with it Okay. All right. So got a dispenser all set up. Just, I guess go ahead and take, and take the samples over here. Try and wear my face shield again. It just keeps fogging up. Okay. So here we go. I've been asking people not to write their names on because it makes me think that they haven't collected in the app, but So far that's not been persuasive. So this part can be a little bit time consuming, so if you have a helper, this is a good thing to have them help with. In fact, if they're on site, you could even have them start this before the collection cutoff time because most people have deposited right now. Let's see, it's not going to work. Okay. So, two tubes here. We have about 35 mostly preschool families. So this",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            }
+                        ]
+                    },
+                    "review": {
+                        "reviewer_name": "",
+                        "response_score": "",
+                        "retrieval_score": "",
+                        "review_note": "",
+                        "response_feedback": "",
+                        "retrieval_feedback": ""
+                    }
+                },
+                {
+                    "exchange_id": "exchange_006",
+                    "object": "DOES THIS DO ANYTHING????",
+                    "created": "2023-12-26 16:09:22.847390",
+                    "model": "gpt-4",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "User",
+                                "content": "Is a hair net required PPE?"
+                            },
+                            "finish_reason": "completed"
+                        },
+                        {
+                            "index": 1,
+                            "message": {
+                                "role": "Bot",
+                                "content": "Based on the retrieved content provided, there is no explicit mention of a hair net being required as part of the personal protective equipment (PPE) for the procedures described. The safety procedures listed include a lab coat, gloves, face mask, and face shield or goggles. However, it is important to note that while hair nets are not mentioned in this specific context, they are commonly used in laboratory settings to prevent contamination from human hair. If the protocol being followed is concerned with preventing RNA degradation and contamination, as suggested by the mention of RNases and the precautions against them, it would be prudent to use a hair net to minimize the risk of contamination from human skin and hair. Therefore, while not explicitly stated, a hair net could be considered good laboratory practice in this context, especially when working with sensitive assays like the FloodLAMP QuickColor test."
+                            },
+                            "finish_reason": "completed"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": "",
+                        "completion_tokens": "",
+                        "total_tokens": ""
+                    },
+                    "under_the_hood": {
+                        "retrieved_chunks": [
+                            {
+                                "chunk_num": 1,
+                                "source": "FloodLAMP Training Video 02 - Safety and Contamination.md",
+                                "content": "Speaker 2  [29:36](https://vimeo.com/654504246/b9130720de?ts=1776000)\nNope. No, but I'm sure Randy's work, firefighters would probably look a little intimidated by all this stuff. This is not normally our area. Yeah. But I think the takeaway is, yeah, we're touching stuff and make sure we're clean.\n\nSpeaker 0  [29:54](https://vimeo.com/654504246/b9130720de?ts=1794000)\nYep. Would, would\n\nSpeaker 2  [29:57](https://vimeo.com/654504246/b9130720de?ts=1797000)\ngowns work as well as lab coats?",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 2,
+                                "source": "FloodLAMP Training Video 02 - Safety and Contamination.md",
+                                "content": "Preventing RNA degradation is trickier than preventing DNA degradation. RNases are present in all cell types from prokaryotes to eukaryotes and can sometimes survive prolonged boiling or auto-cliving. So what are the major sources of RNAs contamination in the lab? Aqueous solutions and reagents, environmental exposure as RNAs are in the air, on both surfaces and in dust, and from human skin and hair. How can you prevent this contamination? Always wear gloves in the lab and change them often, especially after contact with skin, hair, doorknobs, keyboards, or animals. Use RNAs-free solutions and RNAs-free certified disposable plasticware and filter tips. Maintain a separate area for RNA work and carefully clean the surfaces. Decontaminate glassware by baking at 180 degrees Celsius or higher for several hours or by soaking in freshly prepared 0.1% DEPC water or ethanol for one hour, followed by draining and autocleaning. Decontaminate polycarbonate or polystyrene materials such as",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 3,
+                                "source": "SOP-104-A_1 Test Training - Run Form NO HTML.md",
+                                "content": "# Amplification Training - Run Form\n\n## PREP\n\nPen & sharpie labeled with green tape\nSeparation of Post-Amp area\nHeaters on (Heat indicator lit!)\nSafety Procedures:\nlab coat\ngloves\nface mask\nface shield or goggles\nAlcohol wipe sample tubes\n\nLog Link: SOP-104-B_1 {SITE}\nLocation:\nName:\nDate:\n\nTime:\n\n## CONTAMINATION INFRACTIONS\n\nPPE lapse/removal\nUse green labeled pen/marker with bare hands and not putting it to be cleaned afterwards\nUse unmarked pen/marker with clean gloves (without cleaning gloves after or changing gloves)\nBare hands on anything improper, except in desk area\nReuse pipette tip improperly\nTouch pipette tip to anything and then not discard it\nTouch anything dirty then go back to work (face, mask, uncleaned phone, uncleaned laptop)\n\n## NOTE\n\nIt is recommended that 1XISS and Reaction Mix be prepared before the assay run (instructions below).\n\n## DOCUMENTATION\n\nCheck off each item after completing it\nWrite legibly\n\n## GLOSSARY OF TERMS",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 4,
+                                "source": "FloodLAMP Training Video 11 - Large Scale Clean and Dispense.md",
+                                "content": "could be over 100 people. I can't see it here so I'll just turn this like this. Way. Here's a big bag. Small tube in a big bag. How did that happen? We'll use this to put small bags. Lots of bags. Lots of bags. Pretty exciting, huh? Some folks skip the big outer individual bio bags and just put tubes straight in racks. And then I do recommend if you do that keeping them in a bin that says biohazard just to be extra careful. Okay. Alright, another giant bag. I've got a few different ways of collection kits that I've got out. Probably a faster way to do this, but you usually have help for this. Maybe we should give Carillon a rack, huh? It'll make this a lot easier. Given the state of things, the prevalence of the virus seems a little silly to put asymptomatic screening samples in a bunch of plastic, but we're following the rules. I'm gonna go ahead and just double check the lids. This is being extra cautious but We're just going to spray these with ethanol. I don't want to crank these",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            }
+                        ]
+                    },
+                    "review": {
+                        "reviewer_name": "",
+                        "response_score": "",
+                        "retrieval_score": "",
+                        "review_note": "",
+                        "response_feedback": "",
+                        "retrieval_feedback": ""
+                    }
+                },
+                {
+                    "exchange_id": "exchange_007",
+                    "object": "DOES THIS DO ANYTHING????",
+                    "created": "2023-12-26 16:10:13.715027",
+                    "model": "gpt-4",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "User",
+                                "content": "How long does the amplification step take on the heater?"
+                            },
+                            "finish_reason": "completed"
+                        },
+                        {
+                            "index": 1,
+                            "message": {
+                                "role": "Bot",
+                                "content": "The amplification step on the heater takes 25 minutes, as indicated by the instruction to \"Set main timer for 25 min\" in the retrieved content."
+                            },
+                            "finish_reason": "completed"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": "",
+                        "completion_tokens": "",
+                        "total_tokens": ""
+                    },
+                    "under_the_hood": {
+                        "retrieved_chunks": [
+                            {
+                                "chunk_num": 1,
+                                "source": "SOP-104-A_1 Test Training - Run Form NO HTML.md",
+                                "content": "With each add, verify the correct position (tip vs sample tube vs reaction tube)\nTransfer plate/strip to PCR rack (not cold block - rxns don\u2019t go to amp cold)\nRetrieve TPC from freezer, touching only with one hand (consider this hand dirty)\nAdd 2uL TPC to pos. ctrl, return TPC to freezer (IMMEDIATELY change glove)\nCap reaction tubes / seal plate\nChange gloves again after loading tubes/plate onto amp heater\nSet main timer for 25 min\nSet secondary timer for 24 min\nPut sample tubes in fridge\nRemove rxns from amp promptly, wait 1 minute before imaging\nTake photo in lightbox\nFor photo apply crop and \u2018Vivid\u2019 filter (or increase saturation 70% for android)\nLog amp run sheet with QR code\nOn app: Intake, Process and Result tubes\n\nAmp Heater:\nStrip8 Tubes or Plates\nReaction Mix: Frozen or Fresh\nReaction Mix ID:\nNum Reactions (including controls):\nPos Ctrl ID:\nNeg Ctrl ID (today's 1XISS):\nInitial Inconclusives?:\nNotes:",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 2,
+                                "source": "FloodLAMP Training Video 02 - Safety and Contamination.md",
+                                "content": "amplification reaction. And the reason is because the inactivation reaction, you're putting a nose swab with tons of RNAs in it into that reaction. And that's part of the purpose of it is to degrade RNAs. So we really focus on the second step of this test. How do you know, you know, how do we know if you have this problem? Well, the positive controls won't work. And so another key thing that makes us able to do this test in this kind of environment with newly trained firefighters is the controls, when you use them properly and when you design the test to use the controls, give you a great indication of when the test is working and when it's not. So what are we going to do to avoid the RNAs is, number one, is access control. And I sort of already saw some of this going on. I saw Peter in the lab like leaning over the amp table and I was like, oh no, don't touch anything with your bare hands. So that's the first thing.",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 3,
+                                "source": "FloodLAMP Training Video 03 - 1X Inactivation Saline Solution Prep.md",
+                                "content": "I recommend when you start, You start with the long one. This one corresponds to the mini system. We have one for the standard system. And this one has, this is what you're going to be using to practice all of the items that are checked on our certification. So you want your pen labeled with green tape, separation of the post-amp area. Got that. Heaters are on. And now this is an important part. The heater indicator light is lit. If you just turn this on, it's easy to think it's hot, and then it's not, and you go to use it. So all the heaters have a heating indicator light, so know what that is. It looks like little flames coming up there. So you notice these are very similar, except this just has some extra steps. This fits on one page. This is three pages. So it also has the common infractions here, which you'll want to watch out for. So I'm going to keep checking this as we go, Though the one I'm going to fill out mainly is this one for a run. This is what you'll use once you get",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 4,
+                                "source": "FloodLAMP Training Video 01 - Intro.md",
+                                "content": "Test Trainer  [0:00](https://vimeo.com/668273372/14ec57a5d7?ts=0)\nAll right. Hi there. I'm Randy True with FolodLAMP Biotechnologies, and this is the FloodLAMP testing training program for our QuickColor test. This is a visually read colorimetric LAMP test that can take as little as about 15 minutes of hands-on time to run, and has high sensitivity, molecular quality. This is a great screening test and we're going to be running it here in this setup and the training program is going to cover all the mechanics and the tips and tricks for doing all the steps. We're going to be going through both the steps as well as the run sheets and the way that we log these runs, which are a key part of our quality system. So stay tuned. This is going to be a fun little series here. Thanks.",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            }
+                        ]
+                    },
+                    "review": {
+                        "reviewer_name": "",
+                        "response_score": "",
+                        "retrieval_score": "",
+                        "review_note": "",
+                        "response_feedback": "",
+                        "retrieval_feedback": ""
+                    }
+                },
+                {
+                    "exchange_id": "exchange_008",
+                    "object": "DOES THIS DO ANYTHING????",
+                    "created": "2023-12-26 16:12:57.668846",
+                    "model": "gpt-4",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "User",
+                                "content": "What kind of processing do you need to do to your results image?"
+                            },
+                            "finish_reason": "completed"
+                        },
+                        {
+                            "index": 1,
+                            "message": {
+                                "role": "Bot",
+                                "content": "Based on the retrieved content, it seems that the processing of the results image for the FloodLAMP QuickColor test involves a few steps:\n\n1. **Adjusting Lighting**: Ensure that the lighting is appropriate for the image capture. If the device does not pick up the image well, you may need to move it back or adjust the position until the lighting is suitable.\n\n2. **Taking a Photo**: Once the lighting is set, take a photo of the test. You may need to zoom in on your phone or adjust the camera angle to get a clear image.\n\n3. **Applying Filters**: If you are using an iPhone, apply a second filter called \"Vivid\" to enhance the image quality.\n\n4. **Cropping**: Crop the image a bit more to focus on the relevant area of the test result.\n\nThese steps are necessary to ensure that the image of the test result is clear and that the colors are vivid enough to be accurately analyzed. After processing the image as described, you should have a properly adjusted image ready for result interpretation."
+                            },
+                            "finish_reason": "completed"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": "",
+                        "completion_tokens": "",
+                        "total_tokens": ""
+                    },
+                    "under_the_hood": {
+                        "retrieved_chunks": [
+                            {
+                                "chunk_num": 1,
+                                "source": "FloodLAMP Training Video 08 - Intaking Samples.md",
+                                "content": "and we're going to keep these in order. It doesn't like the lighting here. There we go. For some reason it doesn't pick it up for you, usually it helps by moving it back. It's kind of a little counterintuitive there. Okay, so now hit cancel. And now if you wanna linearly process them through, choose your batch, update it, tell it it's on the amp. There you go. And now once it comes off and you're ready to result it, you go into that one, hit update, hit result, and you can result them. If for some reason one of the tubes is positive or inconclusive and you want to result the rest of the batch is negative, you can hit this arrow and you can go scan it. Well, this would be I think to add to the to that batch what we could do is go up to the scanner here and hit no batch. Say this one was positive. We could scan it. There you go. I notice now it pulled that one out of the batch. I think if we do this, I believe, we can add it right back in. So that allows you to flexibly process all the",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 2,
+                                "source": "FloodLAMP Training Video 09 - Resulting.md",
+                                "content": "get the right filter. Take a photo. You can either zoom in on your phone or afterwards. And then we do, if you have an iPhone, we apply the second filter over, it's called Vivid. We'll crop it a little bit more. Okay. There we go. And so now that's done.",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 3,
+                                "source": "FloodLAMP Training Video 02 - Safety and Contamination.md",
+                                "content": "electrophoresis tanks by soaking in 3% hydrogen peroxide for 10 minutes. DEPC treatment of solutions is accomplished by adding one ml of any remaining amino acid residue.",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 4,
+                                "source": "FloodLAMP Training Video 13 - Reaction Plate Prep.md",
+                                "content": "want to start one edge, pull it across. You just want to make sure it gets fully covered. I was close there. You can see I started a little too far on the right. And then this sealer here, this plate has a little bit of a raised lip, so we're going to do it from both sides. There you go, and you just want to see all of the spots. Okay, you want to take this and again put it in a plastic bag. Okay, there's your sealed plate. You may also have, or if you don't, and it's a convenient format for you, you can request these. These are little 24 blocks, so they're basically plates that have been chopped up but are certified DNAase, RNAase free. And so in that case, you would want to take your plate seal, and with scissors you bleached and ethanoled cut sections that are sort of just big enough to cover these guys. And you can seal them the same way. Okay, that's the little plate setup here.",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            }
+                        ]
+                    },
+                    "review": {
+                        "reviewer_name": "",
+                        "response_score": "",
+                        "retrieval_score": "",
+                        "review_note": "",
+                        "response_feedback": "",
+                        "retrieval_feedback": ""
+                    }
+                },
+                {
+                    "exchange_id": "exchange_009",
+                    "object": "DOES THIS DO ANYTHING????",
+                    "created": "2023-12-26 16:15:14.002414",
+                    "model": "gpt-4",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "User",
+                                "content": "What is the total volume of the reaction tube with the sample and reaction mix?"
+                            },
+                            "finish_reason": "completed"
+                        },
+                        {
+                            "index": 1,
+                            "message": {
+                                "role": "Bot",
+                                "content": "The retrieved content does not explicitly state the total volume of the reaction tube with the sample and reaction mix. However, it does mention adding 1mL of 1XISS to each sample tube. If we assume that the 1mL of 1XISS is the only volume added to the sample itself, then the total volume would be the volume of the sample plus the 1mL of 1XISS. Without additional information on the volume of the sample or the reaction mix, I cannot provide an exact total volume. If you have more specific information about the volumes of the sample and the reaction mix, I could then calculate the total volume for you."
+                            },
+                            "finish_reason": "completed"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": "",
+                        "completion_tokens": "",
+                        "total_tokens": ""
+                    },
+                    "under_the_hood": {
+                        "retrieved_chunks": [
+                            {
+                                "chunk_num": 1,
+                                "source": "FloodLAMP Training Video 07 - Adding Samples to Reaction.md",
+                                "content": "Okay, so we're ready to add the samples and you can actually do this while they're cooling down. Our timer just went off so I'll do this part fast. But what we're going to do is we're going to finish filling out our form here. Number of reactions is going to be seven. Five samples plus the two controls. We will record the positive control ID in just a second. We're going to do two things here. We're going to, just to be careful, we're going to put these in number order. 43. Again, you can do this while they're cooling down, 32, 24, and 23. Okay, There we go. If you want to be extra careful, you can write the numbers down. Spot number three, four, five, six, seven. This is actually when you're Using a larger number of tubes in our lookup rack, this is a little more straightforward. Here with small numbers, I kind of like to have the backup. 23, 24, 32, 43, and 115. Okay so we're going to set up the tips to align with reactions. Should already be set up. I'm just going to use the",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 2,
+                                "source": "SOP-104-A_1 Test Training - Run Form NO HTML.md",
+                                "content": "Add 1mL of 1XISS to each sample tube\nVerify that tubes are properly sealed afterward (i.e., not cross-threaded)\nVortex 10 sec (if individual tubes) or 30 sec (if tubes-in-rack)\nHeat 8 min in Water Bath (set to 99\u00b0C)\nCool 10 min\nPut in refrigerator before 30 minute mark\n\n## REACTION MIX PREP",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 3,
+                                "source": "FloodLAMP Training Video 05 - Reaction Mix Prep.md",
+                                "content": "## metadata\nlast updated: 12-06-2023 Created\nlink: https://vimeo.com/668261400/fa2b78d5e7\ntranscript source: dgwhspm\nsummaries source: deepgram\nlength: 15:33\n\n## content\n\n### summaries\n\nSummary  [0:00](https://vimeo.com/668261400/fa2b78d5e7?ts=0)\nWe're going to make enough reaction mix for 48 reactions. You could also do a plate of 96 reactions\n\nSummary  [4:21](https://vimeo.com/668261400/fa2b78d5e7?ts=261000)\nThe key here is 655 that's the number to set the P1000 pipette. \n\nSummary  [9:52](https://vimeo.com/668261400/fa2b78d5e7?ts=592000)\nYou can do 48 reactions, or 96 or more.\n\n### transcript",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 4,
+                                "source": "FloodLAMP Training Video 02 - Safety and Contamination.md",
+                                "content": "in Florida are in medical office rooms, which just have windows. And so they aren't doing it like this, where you have an open garage. You know, labs typically have biosafety cabinets or chem hoods. Those are good places to do it. So there's a sort of a few options here, but I think it is important to highlight that this is the step to pay the most attention to is this very first step of opening the tube to add the inactivation solution. After that, it gets vortexed and heated, and then that it's a chemical plus heat inactivation, which denatures all the proteins and lysis the virus. And so it's not even a positive sample would not be infectious after that step. So in terms of chemical safety, I provided a link here to the SDSs involved with our test. And the two main chemicals are TSEP and EDTA, which are the two components of the main components of the inactivation solution. This inactivation solution is at two, You work with it at two concentrations, the 100x, which is what you use",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            }
+                        ]
+                    },
+                    "review": {
+                        "reviewer_name": "",
+                        "response_score": "",
+                        "retrieval_score": "",
+                        "review_note": "",
+                        "response_feedback": "",
+                        "retrieval_feedback": ""
+                    }
+                },
+                {
+                    "exchange_id": "exchange_010",
+                    "object": "DOES THIS DO ANYTHING????",
+                    "created": "2023-12-26 16:18:59.354391",
+                    "model": "gpt-4",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "User",
+                                "content": "Reaction Mix should be kept in the fridge for future use. True or False, explain."
+                            },
+                            "finish_reason": "completed"
+                        },
+                        {
+                            "index": 1,
+                            "message": {
+                                "role": "Bot",
+                                "content": "True. Based on the retrieved content, it is indicated that the reaction mix, once prepared, should be handled with care to maintain its integrity. The mention of using a cold block suggests that the reaction mix is temperature-sensitive and should be kept cold but not frozen. Additionally, the reference to having made the reaction mix a few days ago and still having two strips left implies that the reaction mix can be stored for future use, as long as it is kept under the right conditions, which would typically be in a refrigerator to keep it cold. Therefore, it is true that the Reaction Mix should be kept in the fridge for future use to ensure its stability and viability for subsequent reactions."
+                            },
+                            "finish_reason": "completed"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": "",
+                        "completion_tokens": "",
+                        "total_tokens": ""
+                    },
+                    "under_the_hood": {
+                        "retrieved_chunks": [
+                            {
+                                "chunk_num": 1,
+                                "source": "FloodLAMP Training Video 08 - Intaking Samples.md",
+                                "content": "samples together, which typically they're going to be negative. Well, not so much right now, unfortunately, but when you're doing routine screening. And then the few positives that you do get, you can pull out easily. And the result of the rest is negative, and the positive is positive. So we're going to make sure to remember our key step here, get these guys in the fridge. There we go. Thanks for watching!",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 2,
+                                "source": "SOP-104-A_1 Test Training - Run Form NO HTML.md",
+                                "content": "Add 1mL of 1XISS to each sample tube\nVerify that tubes are properly sealed afterward (i.e., not cross-threaded)\nVortex 10 sec (if individual tubes) or 30 sec (if tubes-in-rack)\nHeat 8 min in Water Bath (set to 99\u00b0C)\nCool 10 min\nPut in refrigerator before 30 minute mark\n\n## REACTION MIX PREP",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 3,
+                                "source": "FloodLAMP Training Video 06 - Thawing Reactions.md",
+                                "content": "cold block. Here's the cold block. Because you want the cold block to warm up just a little bit. You don't want it to be totally frozen so that when you put the reactor strips in it they you want to stay cold but not frozen. OK. In terms of our run sheet here, there's where we're at. We're using strip eight tubes. They are frozen. And the reaction mix ID was on there. I can also get it from when I made it. Let's show you what that looks like. Here it is. So it's RM0115-1. I made this just a few days ago and I made all six strips. So that means six strips. I can say two strips left.",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            },
+                            {
+                                "chunk_num": 4,
+                                "source": "FloodLAMP Training Video 05 - Reaction Mix Prep.md",
+                                "content": "## metadata\nlast updated: 12-06-2023 Created\nlink: https://vimeo.com/668261400/fa2b78d5e7\ntranscript source: dgwhspm\nsummaries source: deepgram\nlength: 15:33\n\n## content\n\n### summaries\n\nSummary  [0:00](https://vimeo.com/668261400/fa2b78d5e7?ts=0)\nWe're going to make enough reaction mix for 48 reactions. You could also do a plate of 96 reactions\n\nSummary  [4:21](https://vimeo.com/668261400/fa2b78d5e7?ts=261000)\nThe key here is 655 that's the number to set the P1000 pipette. \n\nSummary  [9:52](https://vimeo.com/668261400/fa2b78d5e7?ts=592000)\nYou can do 48 reactions, or 96 or more.\n\n### transcript",
+                                "chunk_score": "",
+                                "chunk_note": ""
+                            }
+                        ]
+                    },
+                    "review": {
+                        "reviewer_name": "",
+                        "response_score": "",
+                        "retrieval_score": "",
+                        "review_note": "",
+                        "response_feedback": "",
+                        "retrieval_feedback": ""
+                    }
+                }
+            ]
+        }
+    ]
+}
